@@ -4,7 +4,7 @@
 require 'functions.php';
 
 
-if(isset($_POST["InitTemp"])){
+if(isset($_POST["InitTemp"]) && isset($_POST["StartTempScale"]) && isset($_POST["EndTempScale"])){
     //Conversions
     $inputTemp = $_POST["InitTemp"];
     
@@ -45,8 +45,18 @@ if(isset($_POST["InitTemp"])){
     echo'
     <div>
     <form action="" method="post">
+    Start Temperature Scale: 
+    F<input type="radio" name="StartTempScale" value=0 />
+    C<input type="radio" name="StartTempScale" value=1 />
+    K<input type="radio" name="StartTempScale" value=2 />
+    <br />
     Temperature: <input type="number" name="InitTemp" />
     <br />
+    End Temperature Scale: 
+    F<input type="radio" name="EndTempScale" value=0 />
+    C<input type="radio" name="EndTempScale" value=1 />
+    K<input type="radio" name="EndTempScale" value=2 />
+    <br/ >
     <input type="submit" />
     </form>
     </div>
