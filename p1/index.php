@@ -8,6 +8,8 @@ if(isset($_POST["InitTemp"])){
     //Conversions
     $inputTemp = $_POST["InitTemp"];
     
+    echo '<div>';
+    
     //F to C
     $outputTemp = myFToC($inputTemp);
     echo "$inputTemp F to $outputTemp C";
@@ -37,14 +39,16 @@ if(isset($_POST["InitTemp"])){
     $outputTemp = myKToF($inputTemp);
     echo "$inputTemp K to $outputTemp F";
     echo "<br />";
+    
+    echo '</div>';
 }else{
     echo'
-    
+    <div>
     <form action="" method="post">
     Temperature: <input type="number" name="InitTemp" />
     <br />
     <input type="submit" />
     </form>
-    
+    </div>
     ';
 }
