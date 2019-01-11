@@ -1,5 +1,6 @@
 <?php
 //functions.php
+
 function myFToC($temp)
 {
     return ($temp-32)*(5/9);
