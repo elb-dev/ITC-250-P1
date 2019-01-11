@@ -30,43 +30,55 @@ if(isset($_POST["InitTemp"]) && $_POST["StartTempScale"] != $_POST["EndTempScale
         if($EndTempScale == 1){
             //F to C
             $outputTemp = myFToC($inputTemp);
-            echo "$inputTemp &#8457; to $outputTemp &#8451;";
+            $formatInputTemp = number_format($inputTemp,2);
+            $formatOutputTemp = number_format($outputTemp,2);
+            echo "$formatInputTemp &#8457; to $formatOutputTemp &#8451;";
             echo "<br />";
         }else{
             //F to K
             $outputTemp = myFToK($inputTemp);
-            echo "$inputTemp &#8457; to $outputTemp &#8490;";
+            $formatInputTemp = number_format($inputTemp,2);
+            $formatOutputTemp = number_format($outputTemp,2);
+            echo "$formatInputTemp &#8457; to $formatOutputTemp &#8490;";
             echo "<br />";
         }
     }elseif($StartTempScale == 1){
         if($EndTempScale == 0){
             //C to F
             $outputTemp = myCToF($inputTemp);
-            echo "$inputTemp &#8451; to $outputTemp &#8457;";
+            $formatInputTemp = number_format($inputTemp,2);
+            $formatOutputTemp = number_format($outputTemp,2);
+            echo "$formatInputTemp &#8451; to $formatOutputTemp &#8457;";
             echo "<br />";
         }else{
             //C to K
             $outputTemp = myCToK($inputTemp);
-            echo "$inputTemp &#8451; to $outputTemp &#8490;";
+            $formatInputTemp = number_format($inputTemp,2);
+            $formatOutputTemp = number_format($outputTemp,2);
+            echo "$formatInputTemp &#8451; to $formatOutputTemp &#8490;";
             echo "<br />";
         }
     }elseif($StartTempScale == 2){
         if($EndTempScale == 1){
             //K to C
             $outputTemp = myKToC($inputTemp);
-            echo "$inputTemp &#8490; to $outputTemp &#8451;";
+            $formatInputTemp = number_format($inputTemp,2);
+            $formatOutputTemp = number_format($outputTemp,2);
+            echo "$formatInputTemp &#8490; to $formatOutputTemp &#8451;";
             echo "<br />";
         }else{
             //K to F
             $outputTemp = myKToF($inputTemp);
-            echo "$inputTemp &#8490; to $outputTemp &#8457;";
+            $formatInputTemp = number_format($inputTemp,2);
+            $formatOutputTemp = number_format($outputTemp,2);
+            echo "$formatInputTemp &#8490; to $formatOutputTemp &#8457;";
             echo "<br />";
         }
     }
     
     echo '
 	</span>
-	<h2><div class="button" ><a href="https://teoswork.tech/250/sandbox/p1/">Go Back</a></div</h2>
+	<h2><div class="button" ><a href="http://derekheducation.dreamhosters.com/itc250/p1/">Go Back</a></div</h2>
 	</div>
 	';
 }else{
